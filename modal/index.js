@@ -1,26 +1,27 @@
 // create and append elements to document 
 
 // our lightbox exists all the time, but  we can use css to make sure it doesn't display until we want it to
-// this div contains only the background opacity (like an overlay, and it covers the whole screen)
+// this div contains only the background opacity contained in the css (like an overlay)
 const lightbox = document.createElement('div');
 lightbox.id = 'lightbox';
 document.body.appendChild(lightbox);
 
-// creating the child element of the lightbox overlay above
+// Creating the Child Element of the lightbox div Above
 const lightboxImg = document.createElement('img');
 lightboxImg.id = 'lightboxImg';
 lightbox.appendChild(lightboxImg);
 
 
-// create array from gallery images
+// Creating an Array from the Gallery Images
 
-// querySelectorAll does exactly what it says on the tin, and puts those elements in an array
+// querySelectorAll does exactly what it says on the tin by selecting all elements that share the identifier, and puts those elements in an array for us to use
 const images = document.querySelectorAll('.gallery img');
 
-// listen for click event, for all images in array
+
+// Listen for Click Event, for all Images in the Array
 
 // populate image on click event
-//'images is the array, and each 'image' is the element we want to effect
+//'images' is the array, while each 'image' is the element we want to affect in that array
 // 'e' can be anything you want, but 'e' or 'event' is the convention
 images.forEach((image) => {
   //for each image, it adds an event listener, for onClick
@@ -33,7 +34,8 @@ images.forEach((image) => {
   });
 });
 
-//hide lightbox when clicking anywhere outside of the image
+
+//Hide lightbox When Clicking Anywhere Outside of the Original Image
 
 //here we are adding an event listener to the modal itself, allowing us to close it with a 'click', as long as we click outside of the picture
 lightbox.addEventListener('click', (e) => {
