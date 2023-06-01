@@ -24,7 +24,7 @@ The `<p>` is a child of the `<div>`
 The `<em>` is a child of the `<p>`
 
 ### Resources
-[DOM](https://www.w3.org/TR/dom)
+[DOM](https://www.w3.org/TR/dom)  
 [Nodes](https://developer.mozilla.org/en-US/docs/Glossary/Node/DOM)
 
 
