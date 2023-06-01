@@ -1,0 +1,83 @@
+
+
+/* CSS FOR LIGHTBOX */
+
+/* our lightbox div, created in index.js */
+#lightbox {
+  position: fixed;
+  z-index: 1000;
+  top: 0; /* pins it to the top */
+  width: 100vw; /* covers the entire viewport width */
+  height: 100vh; /* covers the entire viewport height */
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+/* when 'active' class is appended, this css is active */ 
+#lightbox.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* img appended within the lightbox div */
+#lightbox img {
+  padding: 4px;
+  border: 1px solid white;
+  border-radius: 3em;
+  /* min is a function, that takes three parameters, and selects the smallest of them.  em is a measurement, relative to the font-size of the element it is in.  REM, on the other hand, is relative to the root font size of the document, and remains the same value throughout the DOM.  First value given here is the ideal size for the element, but failing that, takes the smallest of the following values  */
+  width: min(100em, 90vw, 100vh);
+}
+
+
+/* CSS FOR MAIN ELEMENTS */
+
+.outer-container {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.row-container {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  max-width: 80em;
+  height: 80vh;
+}
+
+
+/* selects all direct children of .gallery, which in this case, is the divs holding our images */
+.gallery > * {
+  width: 30%;
+  height: 30%;
+}
+
+
+.gallery img {
+  cursor: pointer;
+  /* our images are now set to take up 100% of the parent div */
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+
+/*FADE_OUT EFFECT */
+
+.gallery img{
+  transition: 0.8s;  
+  opacity: 100%;
+}
+
+.gallery img:hover {
+  opacity: 70%;
+}
+
+
+
+
+
+
