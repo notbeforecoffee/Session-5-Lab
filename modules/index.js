@@ -1,5 +1,5 @@
-import todaysDate from "./date.js"
-import { area, circumference } from "./circle.js"
+import todaysDate from "./date.js" //this is how we import a module that has been exported as a whole file
+import { area, circumference } from "./circle.js" //this is how we import elements of a module, that have been exported individually
 
 console.log(`today's date is: ${todaysDate}` )
 
