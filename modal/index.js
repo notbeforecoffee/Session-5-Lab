@@ -1,7 +1,7 @@
 // create and append elements to document 
 
-// -> lightbox exists all the time, but  we can use css to make sure it doesn't display until we want it to
-// this div contains only the background opacity (like an overlay, and it covers the whole screen and we can use css to make it cover the entire screen)
+// our lightbox exists all the time, but  we can use css to make sure it doesn't display until we want it to
+// this div contains only the background opacity (like an overlay, and it covers the whole screen)
 const lightbox = document.createElement('div');
 lightbox.id = 'lightbox';
 document.body.appendChild(lightbox);
