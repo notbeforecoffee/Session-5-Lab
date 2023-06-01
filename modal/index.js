@@ -35,11 +35,11 @@ images.forEach((image) => {
 });
 
 
-//Hide lightbox When Clicking Anywhere Outside of the Original Image
+//Hide the lightbox div When Clicking Anywhere Outside of the Original image from the images Array
 
-//here we are adding an event listener to the modal itself, allowing us to close it with a 'click', as long as we click outside of the picture
+//here we are adding an event listener to the modal itself, allowing us to close it with a 'click', as long as we click outside of the image
 lightbox.addEventListener('click', (e) => {
-    // e.currentTarget is whatever you click on, but e.target ONLY refers to the parent element ('lightbox')  NOT to it child elements ('images')
+    // e.currentTarget is whatever you click on, but e.target ONLY refers to the parent element ('lightbox')  NOT to it child elements ('images')  
   if (e.target !== e.currentTarget) return;
   lightbox.classList.remove('active');
 });
