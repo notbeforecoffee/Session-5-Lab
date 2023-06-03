@@ -6,5 +6,5 @@ const todaysDate = new Date()
 
  
 
-// this export statement exports the entire file as one piece of code
+// this export statement exports the value of a function (what the function returns), when there is only one function in the file
 export default todaysDate
